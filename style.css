@@ -1,0 +1,169 @@
+body {
+    
+    height: 150vh;
+    margin:0;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 4fr 3fr 2fr;
+    grid-template-areas: 
+    "main main section-1 section-1"
+    "section-2 section-3 section-3 section-4"
+    "section-5 section-6 section-6 section-4"
+    "section-7 section-8 section-9 section-9";
+    height: 145vh;
+    gap:0.25rem;
+    margin:1em;
+    color:white;
+    border-radius: 4px;
+}
+
+.sections {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    transition: all 0.5s;
+}
+
+p{
+    position: absolute;
+    color:white;
+    opacity: 0;
+    transition: all 0.5s;
+    
+}
+
+.sections:hover p {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
+#main{
+grid-area: main;
+background-image: url(https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600);
+background-size: cover;
+position: relative;
+transition: all 0.5s;
+}
+
+#main:hover::before,
+#section-1:hover::before,
+#section-2:hover::before,
+#section-3:hover::before,
+#section-4:hover::before,
+#section-5:hover::before,
+#section-6:hover::before,
+#section-7:hover::before,
+#section-8:hover::before,
+#section-9:hover::before {
+    transition: all 0.5s;
+    content: "";
+    background-color: #6e60a0a3;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+#section-1{
+grid-area: section-1;
+background-image: url(https://images.unsplash.com/photo-1592296240415-b3400ad7adac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2glMjBzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+background-size: cover;
+position: relative;
+}
+
+
+#section-2{
+grid-area: section-2;   
+background-image: url(https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dGVjaCUyMHN0b3JlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+background-size: cover;
+position: 50% 30%;
+}
+
+#section-3{
+grid-area: section-3;
+background-image: url(https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY2glMjBzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+background-size: cover;
+
+}
+#section-4{
+grid-area: section-4;
+background-image: url(https://images.pexels.com/photos/5054541/pexels-photo-5054541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+background-size: cover;
+position: 10% 45%;
+}
+#section-5{
+grid-area: section-5;
+background-image: url(https://images.pexels.com/photos/3861976/pexels-photo-3861976.jpeg?auto=compress&cs=tinysrgb&w=600);
+background-size: cover;
+
+}
+#section-6{
+grid-area: section-6;
+background-image: url(https://media.istockphoto.com/id/1200486875/photo/different-computers-in-store-background.jpg?b=1&s=170667a&w=0&k=20&c=_q8LshlcAFfD8TXf3D8R7-_UEO9FDz4twKJexIc4D4I=);
+background-size: cover;
+
+}
+#section-7{
+grid-area: section-7;
+background-image: url(https://images.pexels.com/photos/6849082/pexels-photo-6849082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+background-size: cover;
+position: center;
+}
+#section-8{
+grid-area: section-8;
+background-image: url(https://images.pexels.com/photos/4523062/pexels-photo-4523062.jpeg?auto=compress&cs=tinysrgb&w=600);
+background-size: cover;
+position: center;
+}
+#section-9{
+grid-area: section-9;
+background-image: url(https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=600);
+background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    #main-container {
+        height: 160vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, 3fr);
+        grid-template-areas:
+        "main"
+        "section-1"
+        "section-2"
+        "section-3"
+        "section-4"
+        "section-5"
+        "section-6"
+        "section-7"
+        "section-8"
+        "section-9";
+    }
+
+    body {
+        height: 200vh;
+    }
+}
+
+#team-2 {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+
+
+
+
+
+        
+        
+    
+
